@@ -11,8 +11,8 @@ export class LoginComponent {
 
   inputplaceholder="Enter your Account Number"
 
-  acno=""     //or  acno:any
-  pswd=""
+  // acno=""     //or  acno:any
+  // pswd=""
 
   userDetails:any={
     1000:{acno:1000,username:"anu",password:"abc123",balance:0},
@@ -27,9 +27,31 @@ export class LoginComponent {
 
   }
 
-  login(){
-    var acnum=this.acno
-    var psw=this.pswd
+  // login(){
+  //   var acnum=this.acno
+  //   var psw=this.pswd
+  //   var userDetails=this.userDetails
+    
+  //   if(acnum in userDetails){
+    
+      
+  //     if(psw==userDetails[acnum]["password"]){
+  //       alert("Login Success")
+  //     }
+  //     else{
+  //       alert("Incorrect Password")
+  //     }
+  //   }
+  //   else{
+  //     alert("Incorrect account number or not registered")
+  //   }
+  // }
+
+
+  login(a:any,b:any){
+    
+    var acnum=a.value
+    var psw=b.value
     var userDetails=this.userDetails
     
     if(acnum in userDetails){
@@ -47,16 +69,19 @@ export class LoginComponent {
     }
   }
 
-  acnoChange(event:any){
-    
-    this.acno=event.target.value
-    //  console.log(this.acno);
-  }
 
-  passwordChange(event:any){
-    this.pswd=event.target.value
-    //  console.log(this.pswd);
+
+
+  // acnoChange(event:any){
     
-  }
+  //   this.acno=event.target.value
+  //   //  console.log(this.acno);
+  // }
+
+  // passwordChange(event:any){
+  //   this.pswd=event.target.value
+  //   //  console.log(this.pswd);
+    
+  // }
     
 }

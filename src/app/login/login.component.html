@@ -3,13 +3,13 @@
     <h2 class="text-white">Sign in to your Bank Account</h2>
     <form action="">
         <div class="mt-5 p-2">
-            <input (change)="acnoChange($event)" class="form-control p-2" type="text" [placeholder]="inputplaceholder">
+            <input #acno  class="form-control p-2" type="text" [placeholder]="inputplaceholder">
         </div>
         <div class="mt-4 p-2">
-            <input (change)="passwordChange($event)" class="form-control p-2" type="password" placeholder="Enter your Password">
+            <input #psw class="form-control p-2" type="password" placeholder="Enter your Password">
         </div>
         <div class="mt-4">
-            <button class="btn btn-outline-light btn border-2" (click)="login()" >Login</button>
+            <button class="btn btn-outline-light btn border-2" (click)="login(acno,psw)" >Login</button>
         </div>
     </form>
 </div>
