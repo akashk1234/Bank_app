@@ -1,0 +1,15 @@
+
+<div class="container w-50 p-5 text-center mt-5 " style="background-color: rgba(0, 0, 0, 0.223); border-radius: 30px;">
+    <h2 class="text-white">Sign in to your Bank Account</h2>
+    <form action="">
+        <div class="mt-5 p-2">
+            <input (change)="acnoChange($event)" class="form-control p-2" type="text" [placeholder]="inputplaceholder">
+        </div>
+        <div class="mt-4 p-2">
+            <input (change)="passwordChange($event)" class="form-control p-2" type="password" placeholder="Enter your Password">
+        </div>
+        <div class="mt-4">
+            <button class="btn btn-outline-light btn border-2" (click)="login()" >Login</button>
+        </div>
+    </form>
+</div>
